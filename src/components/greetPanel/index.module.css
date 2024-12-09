@@ -1,0 +1,68 @@
+.mainContainer {
+    background: url('/img/bg-mask1.png') 50% 50%/ cover, var(--main-color);
+    width: 100%;
+    mask: url('/img/bg-mask2.png') 100% 100% / cover;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    padding: var(--header-height) var(--main-padding-1) utopia.clamp(80, 192);
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+
+    @media (width <=930px) {
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+}
+
+.textContainer {
+    margin-top: 59px;
+    flex-direction: column;
+    max-width: 835px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.bigText {
+    composes: bigText1 from global;
+    color: var(--font-color-1);
+    line-height: 96%;
+
+    &>span:nth-child(3) {
+        font-size: utopia.clamp(32, 56);
+        color: var(--font-color-2);
+        text-transform: lowercase;
+    }
+
+    &>span:nth-child(5) {
+        font-size: utopia.clamp(32, 61);
+        line-height: 123%;
+    }
+}
+
+.normalText {
+    composes: normalText3 from global;
+    color: var(--font-color-2);
+    max-width: 672px;
+}
+
+.list {
+    margin-top: 42px;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--font-color-2), transparent 70%), transparent);
+    border-radius: 10px;
+    padding: 25px 60px;
+    list-style: url('img/check.svg');
+    gap: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    li {
+        color: var(--font-color-1);
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 130%;
+    }
+}
