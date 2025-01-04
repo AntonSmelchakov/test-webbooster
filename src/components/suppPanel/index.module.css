@@ -1,0 +1,18 @@
+.mainContainer {
+    h2 {
+        font-family: var(--third-family);
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 100%;
+        text-align: center;
+        color: #fff;
+    }
+
+    p {
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 155%;
+        color: #fff;
+    }
+}
